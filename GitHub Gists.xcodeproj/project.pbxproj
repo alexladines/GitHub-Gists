@@ -56,15 +56,71 @@
 		0F2DEE4422E7A50300AFFB69 /* GitHub Gists */ = {
 			isa = PBXGroup;
 			children = (
-				0F2DEE4522E7A50300AFFB69 /* AppDelegate.swift */,
-				0F2DEE4722E7A50300AFFB69 /* MasterViewController.swift */,
-				0F2DEE4922E7A50300AFFB69 /* DetailViewController.swift */,
-				0F2DEE4B22E7A50300AFFB69 /* Main.storyboard */,
-				0F2DEE4E22E7A50400AFFB69 /* Assets.xcassets */,
-				0F2DEE5022E7A50400AFFB69 /* LaunchScreen.storyboard */,
-				0F2DEE5322E7A50400AFFB69 /* Info.plist */,
+				0F2DEE5E22E7A58900AFFB69 /* Models */,
+				0F2DEE5D22E7A58300AFFB69 /* Model Controllers */,
+				0F2DEE5C22E7A57E00AFFB69 /* Views */,
+				0F2DEE5F22E7A59C00AFFB69 /* Networking */,
+				0F2DEE5B22E7A57800AFFB69 /* View Controllers */,
+				0F2DEE5A22E7A57300AFFB69 /* Storyboards */,
+				0F2DEE5922E7A56F00AFFB69 /* Resources */,
 			);
 			path = "GitHub Gists";
+			sourceTree = "<group>";
+		};
+		0F2DEE5922E7A56F00AFFB69 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0F2DEE4522E7A50300AFFB69 /* AppDelegate.swift */,
+				0F2DEE4E22E7A50400AFFB69 /* Assets.xcassets */,
+				0F2DEE5322E7A50400AFFB69 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0F2DEE5A22E7A57300AFFB69 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0F2DEE4B22E7A50300AFFB69 /* Main.storyboard */,
+				0F2DEE5022E7A50400AFFB69 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0F2DEE5B22E7A57800AFFB69 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0F2DEE4722E7A50300AFFB69 /* MasterViewController.swift */,
+				0F2DEE4922E7A50300AFFB69 /* DetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0F2DEE5C22E7A57E00AFFB69 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0F2DEE5D22E7A58300AFFB69 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		0F2DEE5E22E7A58900AFFB69 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0F2DEE5F22E7A59C00AFFB69 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2CXT3S5CU;
-				INFOPLIST_FILE = "GitHub Gists/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/GitHub Gists/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2CXT3S5CU;
-				INFOPLIST_FILE = "GitHub Gists/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/GitHub Gists/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
