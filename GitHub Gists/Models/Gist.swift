@@ -9,8 +9,6 @@
 import Foundation
 
 // Chose struct over class because each individual Gist will not change.
-
-
 struct Gist: Codable {
     // Nested struct because Owner are always and only part of the Gist struct
     struct Owner: Codable {
