@@ -13,6 +13,16 @@ class GitHubAPIManager {
     static let shared = GitHubAPIManager()
 
     func printPublicGists() {
-        
+        Alamofire.request(GistRouter.getAllPublic)
+            .responseString { (response) in
+                guard response.result.error == nil else {
+                    print(response.result.error!)
+                    return
+                }
+
+                if let receivedString = response.result.value {
+                    print(receivedString)
+                }
+        }
     }
 }
