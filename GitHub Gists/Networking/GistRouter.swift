@@ -41,11 +41,15 @@ enum GistRouter: URLRequestConvertible {
             return url
         }()
 
+        // Check URL
+        print(url)
+        
         // No params for now since I just have a .get case
 
         // Make URLRequest
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
         return urlRequest
+
     }
 }
