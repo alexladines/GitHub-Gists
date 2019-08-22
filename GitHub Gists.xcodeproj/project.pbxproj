@@ -11,6 +11,8 @@
 		0F2C284F230DD3E10094A98B /* GistRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2C284E230DD3E10094A98B /* GistRouter.swift */; };
 		0F2C2851230DD9BB0094A98B /* GistsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2C2850230DD9BB0094A98B /* GistsTableViewController.swift */; };
 		0F2C2853230DDF590094A98B /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2C2852230DDF590094A98B /* Gist.swift */; };
+		0F2C2855230EF86C0094A98B /* BackendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2C2854230EF86C0094A98B /* BackendError.swift */; };
+		0F2C2857230EFA120094A98B /* JSONDecoder+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2C2856230EFA120094A98B /* JSONDecoder+Additions.swift */; };
 		0F2DEE4622E7A50300AFFB69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2DEE4522E7A50300AFFB69 /* AppDelegate.swift */; };
 		0F2DEE4D22E7A50300AFFB69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2DEE4B22E7A50300AFFB69 /* Main.storyboard */; };
 		0F2DEE4F22E7A50400AFFB69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F2DEE4E22E7A50400AFFB69 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 		0F2C284E230DD3E10094A98B /* GistRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistRouter.swift; sourceTree = "<group>"; };
 		0F2C2850230DD9BB0094A98B /* GistsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsTableViewController.swift; sourceTree = "<group>"; };
 		0F2C2852230DDF590094A98B /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
+		0F2C2854230EF86C0094A98B /* BackendError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendError.swift; sourceTree = "<group>"; };
+		0F2C2856230EFA120094A98B /* JSONDecoder+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Additions.swift"; sourceTree = "<group>"; };
 		0F2DEE4222E7A50300AFFB69 /* GitHub Gists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub Gists.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F2DEE4522E7A50300AFFB69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F2DEE4C22E7A50300AFFB69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 		0F2DEE5F22E7A59C00AFFB69 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				0F2C2854230EF86C0094A98B /* BackendError.swift */,
+				0F2C2856230EFA120094A98B /* JSONDecoder+Additions.swift */,
 				0F2C284C230DD3620094A98B /* GitHubAPIManager.swift */,
 				0F2C284E230DD3E10094A98B /* GistRouter.swift */,
 			);
@@ -271,7 +277,9 @@
 				0F2C2853230DDF590094A98B /* Gist.swift in Sources */,
 				0F2DEE4622E7A50300AFFB69 /* AppDelegate.swift in Sources */,
 				0F2C284D230DD3620094A98B /* GitHubAPIManager.swift in Sources */,
+				0F2C2855230EF86C0094A98B /* BackendError.swift in Sources */,
 				0F2C2851230DD9BB0094A98B /* GistsTableViewController.swift in Sources */,
+				0F2C2857230EFA120094A98B /* JSONDecoder+Additions.swift in Sources */,
 				0F2C284F230DD3E10094A98B /* GistRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
