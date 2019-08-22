@@ -30,12 +30,29 @@ class GistsTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         loadGists()
-        addSampleData()
+        
     }
 
     // MARK: - Methods
     func loadGists() {
-        GitHubAPIManager.shared.printPublicGists()
+        GitHubAPIManager.shared.fetchPublicGists { (result) in
+            guard result.error == nil else {
+                self.handleLoadGistsError(result.error!)
+                return
+            }
+
+            if let fetchedGists = result.value {
+                self.gists = fetchedGists
+            }
+
+            self.tableView.reloadData()
+
+        }
+    }
+
+    func handleLoadGistsError(_ error: Error) {
+        // TODO: show error
+
     }
 
     func addSampleData() {

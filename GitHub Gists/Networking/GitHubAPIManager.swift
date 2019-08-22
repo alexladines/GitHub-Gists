@@ -25,4 +25,15 @@ class GitHubAPIManager {
                 }
         }
     }
+
+    func fetchPublicGists(completionHandler: @escaping (Result<[Gist]>) -> Void) {
+        Alamofire.request(GistRouter.getAllPublic)
+            .responseData { (response) in
+                let decoder = JSONDecoder()
+                let results: Result<[Gist]> = decoder.decodeResponse(from: response)
+
+                // TODO: finish
+                completionHandler(results)
+        }
+    }
 }

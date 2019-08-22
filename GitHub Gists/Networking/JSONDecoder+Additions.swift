@@ -24,6 +24,11 @@ extension JSONDecoder {
             return .failure(BackendError.unexpectedResponse(reason: "Did not get data in response"))
         }
 
+        // Check for API provided error which is in JSON form, not all APIs do this
+        if let apiProvidedError = try? self.decode(APIProvidedError.self, from: responseData) {
+            return .failure(BackendError.apiProvidedError(reason: apiProvidedError.message))
+        }
+
         // Turn data into expected type
         do {
             let item = try self.decode(T.self, from: responseData)

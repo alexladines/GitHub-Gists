@@ -17,3 +17,8 @@ enum BackendError: Error {
     case authLost(reason: String)
     case missingRequiredInput(reason: String)
 }
+
+// If endpoint fails, the API provides an error message in JSON form, we have to check for that in JSONDecoder
+struct APIProvidedError: Codable {
+    let message: String
+}
