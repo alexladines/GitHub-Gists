@@ -13,6 +13,8 @@ import PINRemoteImage
 class GistsTableViewController: UITableViewController {
     // MARK: - Properties
     var gists: [Gist] = []
+    var nextPageURLString: String?
+    var isLoading = false
 
     // MARK: - IBOutlets
 
@@ -30,24 +32,33 @@ class GistsTableViewController: UITableViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        loadGists()
+        loadGists(urlToLoad: nil) // load first page
         
     }
 
     // MARK: - Methods
-    func loadGists() {
-        GitHubAPIManager.shared.fetchPublicGists { (result) in
+    func loadGists(urlToLoad: String?) {
+        isLoading = true
+
+        GitHubAPIManager.shared.fetchPublicGists(pageToLoad: urlToLoad) { (result, nextPage) in
+            self.isLoading = false
+            self.nextPageURLString = nextPage
+
             guard result.error == nil else {
                 self.handleLoadGistsError(result.error!)
                 return
             }
 
             if let fetchedGists = result.value {
-                self.gists = fetchedGists
+                if urlToLoad == nil {
+                    // empty out the gists because we're not loading another page
+                    self.gists = []
+                }
+
+                self.gists += fetchedGists
             }
 
             self.tableView.reloadData()
-
         }
     }
 
@@ -99,6 +110,17 @@ class GistsTableViewController: UITableViewController {
             cell.imageView?.image = UIImage(named: "placeholder.png")
         }
 
+        if !isLoading {
+            let rowsLoaded = gists.count
+            let rowsRemaining = rowsLoaded - indexPath.row
+            let rowsToLoadFromBottom = 5
+
+            if rowsRemaining <= rowsToLoadFromBottom {
+                if let nextPage = nextPageURLString {
+                    self.loadGists(urlToLoad: nextPage)
+                }
+            }
+        }
         return cell
 
     }
