@@ -7,5 +7,6 @@ target 'GitHub Gists' do
 
   # Pods for GitHub Gists
   pod 'Alamofire'
+  pod 'PINRemoteImage'
 
 end

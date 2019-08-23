@@ -36,4 +36,19 @@ class GitHubAPIManager {
                 completionHandler(results)
         }
     }
+
+
+    // Get image from each Gist
+    func imageFrom(url: URL, completionHandler: @escaping (UIImage?, Error?) -> Void) {
+        Alamofire.request(url)
+            .responseData { (response) in
+                guard let data = response.data else {
+                    completionHandler(nil, response.error)
+                    return
+                }
+
+                let image = UIImage(data: data)
+                completionHandler(image, nil)
+        }
+    }
 }
