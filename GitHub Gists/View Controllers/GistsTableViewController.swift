@@ -8,11 +8,11 @@
 
 import UIKit
 import Alamofire
+import PINRemoteImage
 
 class GistsTableViewController: UITableViewController {
     // MARK: - Properties
     var gists: [Gist] = []
-    var imageCache: [String: UIImage?] = [:]
 
     // MARK: - IBOutlets
 
@@ -87,29 +87,16 @@ class GistsTableViewController: UITableViewController {
         cell.textLabel?.text = gist.gistDescription
         cell.detailTextLabel?.text = gist.owner?.login
 
-        // TODO: set cell.imageView to display image at gist.ownerAvatarURL
-        cell.imageView?.image = nil
+        // Persistent image caching library
         if let url = gist.owner?.avatarURL {
-            // Check if image is already in cache before making network request
-            if let cachedImage = imageCache[url.absoluteString] {
-                cell.imageView?.image = cachedImage
-            }
-            else {
-                GitHubAPIManager.shared.imageFrom(url: url) { (image, error) in
-                    guard error == nil else {
-                        print(error!)
-                        return
-                    }
-
-                    // Save image so we won't have to keep fetching if they scroll
-                    self.imageCache[url.absoluteString] = image
-
-                    if let cellToUpdate = self.tableView.cellForRow(at: indexPath) {
-                        cellToUpdate.imageView?.image = image
-                        cellToUpdate.setNeedsLayout() // Reload view since in a async
-                    }
+            cell.imageView?.pin_setImage(from: url, placeholderImage: UIImage(named: "placeholder.png")) { (result) in
+                if let cellToUpdate = self.tableView.cellForRow(at: indexPath) {
+                    cellToUpdate.setNeedsLayout()
                 }
             }
+        }
+        else {
+            cell.imageView?.image = UIImage(named: "placeholder.png")
         }
 
         return cell
