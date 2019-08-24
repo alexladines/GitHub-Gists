@@ -115,6 +115,9 @@ extension GitHubAPIManager {
                     return
                 }
 
+
+                // Curious about the headers
+                print(response.response.debugDescription)
                 // See what error we get
                 print(response.response?.allHeaderFields["Status"] as! String)
 
@@ -125,5 +128,43 @@ extension GitHubAPIManager {
     func printMyStarredGistsWithBasicAuth() {
         // TODO: implement
         
+    }
+}
+// MARK: - Basic Auth HTTPBin Test API
+extension GitHubAPIManager {
+    func doGetWithBasicAuth() {
+        // Credentials
+        let username = "user"
+        let password = "passwd"
+
+        Alamofire.request("https://httpbin.org/basic-auth/\(username)/\(password)")
+            .authenticate(user: username, password: password)
+            .responseString { (response) in
+                print(response.response.debugDescription)
+                if let receivedString = response.result.value {
+                    print(receivedString)
+                }
+                else if let error = response.result.error {
+                    print(error)
+                }
+        }
+
+    }
+
+    func doGetWithBasicAuthCredential() {
+        let username = "myUsername"
+        let password = "myPassword"
+        let credential = URLCredential(user: username, password: password, persistence: .forSession)
+        Alamofire.request("https://httpbin.org/basic-auth/\(username)/\(password)") .authenticate(usingCredential: credential)
+            .responseString { response in
+                print(response.response.debugDescription)
+                if let receivedString = response.result.value {
+                    print(receivedString)
+                }
+                else if let error = response.result.error {
+                    print(error)
+                }
+                
+        }
     }
 }
