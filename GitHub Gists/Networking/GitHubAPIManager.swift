@@ -103,3 +103,27 @@ class GitHubAPIManager {
         return nil
     }
 }
+
+// MARK: - Basic Auth
+extension GitHubAPIManager {
+    // Just to see the error I get with auth
+    func printMyStarredGistsWithNoBasicAuth() {
+        Alamofire.request(GistRouter.getMyStarred)
+            .responseString { (response) in
+                guard let receivedString = response.result.value else {
+                    print("Didn't get a string in the response")
+                    return
+                }
+
+                // See what error we get
+                print(response.response?.allHeaderFields["Status"] as! String)
+
+                print(receivedString)
+        }
+    }
+
+    func printMyStarredGistsWithBasicAuth() {
+        // TODO: implement
+        
+    }
+}
