@@ -21,6 +21,22 @@ class GistsTableViewController: UITableViewController {
     // MARK: - IBActions
 
     // MARK: - Life Cycle
+    override func viewWillAppear(_ animated: Bool) {
+        // Add refresh control for pull to refresh
+        if refreshControl == nil {
+            refreshControl = UIRefreshControl()
+            refreshControl?.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        }
+
+        super.viewWillAppear(animated)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadGists(urlToLoad: nil) // load first page
+
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Gists"
@@ -30,11 +46,7 @@ class GistsTableViewController: UITableViewController {
         
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        loadGists(urlToLoad: nil) // load first page
-        
-    }
+
 
     // MARK: - Methods
     func loadGists(urlToLoad: String?) {
@@ -43,6 +55,11 @@ class GistsTableViewController: UITableViewController {
         GitHubAPIManager.shared.fetchPublicGists(pageToLoad: urlToLoad) { (result, nextPage) in
             self.isLoading = false
             self.nextPageURLString = nextPage
+
+            // Refresh control should stop showing now
+            if self.refreshControl != nil, self.refreshControl!.isRefreshing {
+                self.refreshControl?.endRefreshing()
+            }
 
             guard result.error == nil else {
                 self.handleLoadGistsError(result.error!)
@@ -79,6 +96,14 @@ class GistsTableViewController: UITableViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         present(alert, animated: true)
     }
+
+    @objc func refresh(sender: Any) {
+        nextPageURLString = nil // Don't append results
+        GitHubAPIManager.shared.clearCache()
+        loadGists(urlToLoad: nil)
+    }
+
+    
 
     // MARK: - Navigation
 
