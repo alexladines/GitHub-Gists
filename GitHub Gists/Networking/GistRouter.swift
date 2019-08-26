@@ -57,10 +57,6 @@ enum GistRouter: URLRequestConvertible {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
 
-        // Credentials
-
-
-
         return urlRequest
 
     }
