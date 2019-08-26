@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -70,7 +71,32 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rzd-j3-OvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10.144927536231885" y="-213.61607142857142"/>
+            <point key="canvasLocation" x="-128" y="-214"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SgZ-KU-z3a">
+            <objects>
+                <viewController id="bPu-bg-cIh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sUA-3N-MFN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZB-EP-L9a">
+                                <rect key="frame" x="145.5" y="433" width="123" height="30"/>
+                                <state key="normal" title="Login with GitHub"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hZB-EP-L9a" firstAttribute="centerY" secondItem="sUA-3N-MFN" secondAttribute="centerY" id="Dk9-z5-ezL"/>
+                            <constraint firstItem="hZB-EP-L9a" firstAttribute="centerX" secondItem="sUA-3N-MFN" secondAttribute="centerX" id="Tgw-MB-atc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zXJ-RX-MSN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gr6-U7-Hdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="317" y="458"/>
         </scene>
     </scenes>
 </document>

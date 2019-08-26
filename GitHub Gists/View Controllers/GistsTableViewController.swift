@@ -88,6 +88,10 @@ class GistsTableViewController: UITableViewController {
         }
     }
 
+    func loadInitialData() {
+        
+    }
+
     func handleLoadGistsError(_ error: Error) {
         // TODO: show error
 

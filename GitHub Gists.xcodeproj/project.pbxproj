@@ -17,6 +17,7 @@
 		0F2DEE4D22E7A50300AFFB69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2DEE4B22E7A50300AFFB69 /* Main.storyboard */; };
 		0F2DEE4F22E7A50400AFFB69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F2DEE4E22E7A50400AFFB69 /* Assets.xcassets */; };
 		0F2DEE5222E7A50400AFFB69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2DEE5022E7A50400AFFB69 /* LaunchScreen.storyboard */; };
+		0F4699D22313A5B700E510B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4699D12313A5B700E510B9 /* LoginViewController.swift */; };
 		A78238E6590702AE9A41CE97 /* Pods_GitHub_Gists.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384ABC259B616C887AA290E1 /* Pods_GitHub_Gists.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		0F2DEE4E22E7A50400AFFB69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F2DEE5122E7A50400AFFB69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F2DEE5322E7A50400AFFB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F4699D12313A5B700E510B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		14B2B1179FFFA34DE69162DE /* Pods-GitHub Gists.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub Gists.release.xcconfig"; path = "Target Support Files/Pods-GitHub Gists/Pods-GitHub Gists.release.xcconfig"; sourceTree = "<group>"; };
 		384ABC259B616C887AA290E1 /* Pods_GitHub_Gists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHub_Gists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC185D3C71F8C28629E79419 /* Pods-GitHub Gists.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub Gists.debug.xcconfig"; path = "Target Support Files/Pods-GitHub Gists/Pods-GitHub Gists.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				0F2C2850230DD9BB0094A98B /* GistsTableViewController.swift */,
+				0F4699D12313A5B700E510B9 /* LoginViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				0F2DEE4622E7A50300AFFB69 /* AppDelegate.swift in Sources */,
 				0F2C284D230DD3620094A98B /* GitHubAPIManager.swift in Sources */,
 				0F2C2855230EF86C0094A98B /* BackendError.swift in Sources */,
+				0F4699D22313A5B700E510B9 /* LoginViewController.swift in Sources */,
 				0F2C2851230DD9BB0094A98B /* GistsTableViewController.swift in Sources */,
 				0F2C2857230EFA120094A98B /* JSONDecoder+Additions.swift in Sources */,
 				0F2C284F230DD3E10094A98B /* GistRouter.swift in Sources */,

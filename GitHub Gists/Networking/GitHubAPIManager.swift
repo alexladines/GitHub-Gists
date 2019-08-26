@@ -131,8 +131,19 @@ extension GitHubAPIManager {
     }
 }
 
-// MARK: - OAuth 2.0
+// MARK: - OAuth
 extension GitHubAPIManager {
+
+    func hasOAuthToken() -> Bool {
+        return false
+    }
+
+    func URLToStartOAuth2Login() -> URL? {
+        // TODO: implement
+        // TODO: get and print starred gists
+        return nil
+    }
+
     func printMyStarredGistsWithOAuth2() {
         Alamofire.request(GistRouter.getMyStarred)
             .responseString { (response) in
