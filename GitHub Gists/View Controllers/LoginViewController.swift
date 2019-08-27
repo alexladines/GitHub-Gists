@@ -8,6 +8,25 @@
 
 import UIKit
 
+protocol LoginViewControllerDelegate: class {
+
+}
+
 class LoginViewController: UIViewController {
-    
+    // MARK: - Properties
+
+    // MARK: - IBOutlets
+
+    // MARK: - IBActions
+    @IBAction func loginButtonTapped(_ sender: Any) {
+
+    }
+
+    // MARK: - Life Cycle
+
+    // MARK: - Methods
+
+    // MARK: - Navigation
+
+    // MARK: - Data Persistance
 }

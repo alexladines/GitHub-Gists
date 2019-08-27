@@ -89,7 +89,19 @@ class GistsTableViewController: UITableViewController {
     }
 
     func loadInitialData() {
-        
+        if (!GitHubAPIManager.shared.hasOAuthToken()) {
+
+        }
+    }
+
+    func showOAuthLoginView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
+            assert(false, "Misnamed VC")
+            return
+        }
+
+        present(loginVC, animated: true)
     }
 
     func handleLoadGistsError(_ error: Error) {

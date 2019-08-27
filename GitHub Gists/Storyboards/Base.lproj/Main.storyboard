@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="-128" y="-214"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="SgZ-KU-z3a">
             <objects>
-                <viewController id="bPu-bg-cIh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="bPu-bg-cIh" customClass="LoginViewController" customModule="GitHub_Gists" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sUA-3N-MFN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,6 +84,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZB-EP-L9a">
                                 <rect key="frame" x="145.5" y="433" width="123" height="30"/>
                                 <state key="normal" title="Login with GitHub"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="bPu-bg-cIh" eventType="touchUpInside" id="xsV-oR-XEG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
