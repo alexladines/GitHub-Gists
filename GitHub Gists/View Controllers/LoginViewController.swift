@@ -9,17 +9,18 @@
 import UIKit
 
 protocol LoginViewControllerDelegate: class {
-
+    func loginViewControllerDidFinishSelecting(_ controller: LoginViewController)
 }
 
 class LoginViewController: UIViewController {
     // MARK: - Properties
+    weak var delegate: LoginViewControllerDelegate?
 
     // MARK: - IBOutlets
 
     // MARK: - IBActions
     @IBAction func loginButtonTapped(_ sender: Any) {
-
+        delegate?.loginViewControllerDidFinishSelecting(self)
     }
 
     // MARK: - Life Cycle

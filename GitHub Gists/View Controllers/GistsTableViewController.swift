@@ -100,7 +100,7 @@ class GistsTableViewController: UITableViewController {
             assert(false, "Misnamed VC")
             return
         }
-
+        loginVC.delegate = self
         present(loginVC, animated: true)
     }
 
@@ -190,5 +190,17 @@ class GistsTableViewController: UITableViewController {
             // insert it into the array, and add a new row to the table view.
         }
     }
+
+}
+extension GistsTableViewController: LoginViewControllerDelegate {
+    func loginViewControllerDidFinishSelecting(_ controller: LoginViewController) {
+        dismiss(animated: false, completion: nil)
+        guard let authURL = GitHubAPIManager.shared.URLToStartOAuth2Login() else {
+            return
+        }
+
+        // TODO: Show web page to start oauth
+    }
+
 
 }
