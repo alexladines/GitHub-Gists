@@ -132,6 +132,10 @@ extension GitHubAPIManager {
 }
 
 // MARK: - OAuth
+// 1. Redirect users to request GitHub access
+// 2. GitHub redirects back to your site (app for us) with a code
+// 3. Exchange the code for an access token
+// 4. Use the access token to access the API
 extension GitHubAPIManager {
 
     func hasOAuthToken() -> Bool {
