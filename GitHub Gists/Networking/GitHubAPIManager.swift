@@ -12,6 +12,9 @@ import Alamofire
 class GitHubAPIManager {
     static let shared = GitHubAPIManager()
 
+    let clientID: String = "1234567890"
+    let clientSecret: String = "abcdefghijkl"
+
     func clearCache() {
         let cache = URLCache.shared
         cache.removeAllCachedResponses()
