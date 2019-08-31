@@ -148,6 +148,9 @@ extension GitHubAPIManager {
     func URLToStartOAuth2Login() -> URL? {
         // TODO: implement
         // TODO: get and print starred gists
+        let authPath: String = "https://github.com/login/oauth/authorize" +
+        "?client_id=\(clientID)&scope=gist&state=TEST_STATE"
+        return URL(string: authPath)
         return nil
     }
 
