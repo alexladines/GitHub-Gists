@@ -18,6 +18,7 @@
 		0F2DEE4F22E7A50400AFFB69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F2DEE4E22E7A50400AFFB69 /* Assets.xcassets */; };
 		0F2DEE5222E7A50400AFFB69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2DEE5022E7A50400AFFB69 /* LaunchScreen.storyboard */; };
 		0F4699D22313A5B700E510B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4699D12313A5B700E510B9 /* LoginViewController.swift */; };
+		0FF1910D231B5C8B00410BE8 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF1910C231B5C8B00410BE8 /* SafariServices.framework */; };
 		A78238E6590702AE9A41CE97 /* Pods_GitHub_Gists.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384ABC259B616C887AA290E1 /* Pods_GitHub_Gists.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		0F2DEE5122E7A50400AFFB69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F2DEE5322E7A50400AFFB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F4699D12313A5B700E510B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0FF1910C231B5C8B00410BE8 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		14B2B1179FFFA34DE69162DE /* Pods-GitHub Gists.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub Gists.release.xcconfig"; path = "Target Support Files/Pods-GitHub Gists/Pods-GitHub Gists.release.xcconfig"; sourceTree = "<group>"; };
 		384ABC259B616C887AA290E1 /* Pods_GitHub_Gists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHub_Gists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC185D3C71F8C28629E79419 /* Pods-GitHub Gists.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub Gists.debug.xcconfig"; path = "Target Support Files/Pods-GitHub Gists/Pods-GitHub Gists.debug.xcconfig"; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF1910D231B5C8B00410BE8 /* SafariServices.framework in Frameworks */,
 				A78238E6590702AE9A41CE97 /* Pods_GitHub_Gists.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +151,7 @@
 		292A00DC59AC9204F78D66A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0FF1910C231B5C8B00410BE8 /* SafariServices.framework */,
 				384ABC259B616C887AA290E1 /* Pods_GitHub_Gists.framework */,
 			);
 			name = Frameworks;
