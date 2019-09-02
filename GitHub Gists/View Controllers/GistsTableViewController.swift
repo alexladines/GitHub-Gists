@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import PINRemoteImage
+import SafariServices
 
 class GistsTableViewController: UITableViewController {
     // MARK: - Properties
@@ -16,6 +17,7 @@ class GistsTableViewController: UITableViewController {
     var nextPageURLString: String?
     var isLoading = false
     var dateFormatter = DateFormatter()
+    var safariViewController: SFSafariViewController?
 
     // MARK: - IBOutlets
 
@@ -202,5 +204,9 @@ extension GistsTableViewController: LoginViewControllerDelegate {
         // TODO: Show web page to start oauth
     }
 
+
+}
+
+extension GistsTableViewController: SFSafariViewControllerDelegate {
 
 }
