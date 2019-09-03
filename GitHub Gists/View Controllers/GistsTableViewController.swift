@@ -202,6 +202,14 @@ extension GistsTableViewController: LoginViewControllerDelegate {
         }
 
         // TODO: Show web page to start oauth
+        safariViewController = SFSafariViewController(url: authURL)
+        safariViewController?.delegate = self
+
+        guard let webViewController = safariViewController else {
+            return
+        }
+
+        present(webViewController, animated: true)
     }
 
 
