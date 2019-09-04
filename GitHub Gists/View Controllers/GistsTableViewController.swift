@@ -216,5 +216,9 @@ extension GistsTableViewController: LoginViewControllerDelegate {
 }
 
 extension GistsTableViewController: SFSafariViewControllerDelegate {
-
+    func safariViewController(_ controller: SFSafariViewController, didCompleteInitialLoad didLoadSuccessfully: Bool) {
+        if !didLoadSuccessfully {
+            controller.dismiss(animated: true, completion: nil)
+        }
+    }
 }
