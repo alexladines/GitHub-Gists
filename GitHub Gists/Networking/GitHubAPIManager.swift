@@ -12,6 +12,8 @@ import Alamofire
 class GitHubAPIManager {
     static let shared = GitHubAPIManager()
 
+    var isLoadingOAuthToken = false
+
     let clientID: String = "1234567890"
     let clientSecret: String = "abcdefghijkl"
 
