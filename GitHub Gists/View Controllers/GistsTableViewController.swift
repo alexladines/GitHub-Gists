@@ -39,6 +39,11 @@ class GistsTableViewController: UITableViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+        if !GitHubAPIManager.shared.isLoadingOAuthToken {
+            loadInitialData()
+        }
+
         loadGists(urlToLoad: nil) // load first page
         GitHubAPIManager.shared.printMyStarredGistsWithOAuth2()
 
