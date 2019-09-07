@@ -102,6 +102,7 @@ class GistsTableViewController: UITableViewController {
     }
 
     func showOAuthLoginView() {
+        GitHubAPIManager.shared.isLoadingOAuthToken = true
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
             assert(false, "Misnamed VC")
