@@ -200,6 +200,7 @@ class GistsTableViewController: UITableViewController {
     }
 
 }
+// MARK: - LoginViewControllerDelegate
 extension GistsTableViewController: LoginViewControllerDelegate {
     func loginViewControllerDidFinishSelecting(_ controller: LoginViewController) {
         dismiss(animated: false, completion: nil)
@@ -221,6 +222,7 @@ extension GistsTableViewController: LoginViewControllerDelegate {
 
 }
 
+// MARK: - SFSafariViewControllerDelegate
 extension GistsTableViewController: SFSafariViewControllerDelegate {
     func safariViewController(_ controller: SFSafariViewController, didCompleteInitialLoad didLoadSuccessfully: Bool) {
         if !didLoadSuccessfully {
