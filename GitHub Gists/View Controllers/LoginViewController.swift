@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: - LoginViewControllerDelegate Protocol
 protocol LoginViewControllerDelegate: class {
     func loginViewControllerDidFinishSelecting(_ controller: LoginViewController)
 }
