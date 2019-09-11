@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Possible Errors
 enum BackendError: Error {
     case network(error: Error)
     case unexpectedResponse(reason: String)
