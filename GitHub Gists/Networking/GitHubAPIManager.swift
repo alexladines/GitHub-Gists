@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+// This class manages all of the API calls
 class GitHubAPIManager {
     static let shared = GitHubAPIManager()
 
