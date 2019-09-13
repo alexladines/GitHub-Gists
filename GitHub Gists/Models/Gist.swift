@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Look at relevant .json file
 struct Gist: Codable {
 
     // Owner structs are only part of Gist structs
