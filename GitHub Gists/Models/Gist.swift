@@ -16,6 +16,7 @@ struct Gist: Codable {
         var login: String // If there is an owner, then there is a login
         var avatarURL: URL?
 
+        // Use CodingKeys to match JSON
         enum CodingKeys: String, CodingKey {
             case login
             case avatarURL = "avatar_url"
