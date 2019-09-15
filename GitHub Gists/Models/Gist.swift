@@ -28,6 +28,7 @@ struct Gist: Codable {
     var gistDescription: String?
     var owner: Gist.Owner?
 
+    // Use CodingKeys to match JSON
     enum CodingKeys: String, CodingKey {
         case url
         case id
