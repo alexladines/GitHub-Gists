@@ -22,7 +22,8 @@ class GitHubAPIManager {
         let cache = URLCache.shared
         cache.removeAllCachedResponses()
     }
-    
+
+    // Basic HTTP Request for testing
     func printPublicGists() {
         Alamofire.request(GistRouter.getAllPublic)
             .responseString { (response) in
