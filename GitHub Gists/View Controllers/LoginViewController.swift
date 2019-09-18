@@ -9,6 +9,7 @@
 import UIKit
 
 // MARK: - LoginViewControllerDelegate Protocol
+// This protocol handles dismissing the LoginViewController Scene
 protocol LoginViewControllerDelegate: class {
     func loginViewControllerDidFinishSelecting(_ controller: LoginViewController)
 }
