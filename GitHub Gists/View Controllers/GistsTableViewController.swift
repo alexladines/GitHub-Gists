@@ -51,16 +51,20 @@ class GistsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Gists"
-        navigationController?.navigationBar.prefersLargeTitles = true
-
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addGist))
-        
+        editUserInterface()
     }
 
 
 
     // MARK: - Methods
+
+    func editUserInterface() {
+        title = "Gists"
+        navigationController?.navigationBar.prefersLargeTitles = true
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addGist))
+    }
+
     func loadGists(urlToLoad: String?) {
         isLoading = true
 
