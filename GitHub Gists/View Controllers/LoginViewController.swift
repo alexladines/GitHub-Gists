@@ -14,6 +14,7 @@ protocol LoginViewControllerDelegate: class {
     func loginViewControllerDidFinishSelecting(_ controller: LoginViewController)
 }
 
+// This class is responsible for the login page. Some HTTP protocols require a log in for OAUTH.
 class LoginViewController: UIViewController {
     // MARK: - Properties
     weak var delegate: LoginViewControllerDelegate?
