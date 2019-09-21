@@ -25,7 +25,7 @@ struct Gist: Codable {
 
     var url: URL
     var id: String
-    var gistDescription: String?
+    var gistDescription: String? // These two values are optionals because when creating one, they wont exist yet.
     var owner: Gist.Owner?
 
     // Use CodingKeys to match JSON
