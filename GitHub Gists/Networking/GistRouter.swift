@@ -24,7 +24,7 @@ enum GistRouter: URLRequestConvertible {
         // HTTP Method
         var method: HTTPMethod {
             switch self {
-            case .getAllPublic, .getAtPath, .getMyStarred:
+            case .getAllPublic, .getAtPath, .getMyStarred: // Some of these require OAUTH, look at documentation
                 return .get
             }
         }
