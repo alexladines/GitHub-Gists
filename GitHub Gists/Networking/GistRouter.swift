@@ -12,7 +12,7 @@ import Alamofire
 // This enum creates the url with HTTP request and any parameters
 enum GistRouter: URLRequestConvertible {
 
-    static let baseURLString = "https://api.github.com/"
+    static let baseURLString = "https://api.github.com/" // Found of API guide
 
     // HTTP Cases
     case getAllPublic
