@@ -16,7 +16,7 @@ class GistsTableViewController: UITableViewController {
     var gists: [Gist] = []
     var nextPageURLString: String?
     var isLoading = false
-    var dateFormatter = DateFormatter()
+    var dateFormatter = DateFormatter() // Make here because uses a lot of resources
     var safariViewController: SFSafariViewController?
 
     // MARK: - IBOutlets
