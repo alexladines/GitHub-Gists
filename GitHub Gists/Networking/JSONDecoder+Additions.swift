@@ -15,7 +15,7 @@ extension JSONDecoder {
         // Check for error in getting data
         guard response.error == nil else {
             print(response.error!)
-            return .failure(BackendError.network(error: response.error!))
+            return .failure(BackendError.network(error: response.error!)) // See BackendError.swift for errors
         }
 
         // Check for getting JSON dictionary
