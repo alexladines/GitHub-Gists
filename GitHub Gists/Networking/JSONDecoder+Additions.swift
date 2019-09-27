@@ -37,7 +37,7 @@ extension JSONDecoder {
         catch {
             print("Error trying to decode response")
             print(error)
-            return .failure(BackendError.parsing(error: error))
+            return .failure(BackendError.parsing(error: error)) // See BackendError.swift for errors
         }
 
     }
