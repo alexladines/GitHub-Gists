@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
     // MARK: - IBOutlets
 
     // MARK: - IBActions
+    // Will bring up login view
     @IBAction func loginButtonTapped(_ sender: Any) {
         delegate?.loginViewControllerDidFinishSelecting(self)
     }
