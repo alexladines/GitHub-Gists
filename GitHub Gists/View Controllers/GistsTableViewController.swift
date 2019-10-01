@@ -133,6 +133,7 @@ class GistsTableViewController: UITableViewController {
         
     }
 
+    // Swipe down to refresh
     @objc func refresh(sender: Any) {
         nextPageURLString = nil // Don't append results
         GitHubAPIManager.shared.clearCache()
