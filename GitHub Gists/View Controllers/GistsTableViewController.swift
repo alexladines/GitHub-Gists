@@ -65,6 +65,7 @@ class GistsTableViewController: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addGist))
     }
 
+    // Load gists for table view
     func loadGists(urlToLoad: String?) {
         isLoading = true
 
