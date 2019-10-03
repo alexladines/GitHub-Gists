@@ -58,6 +58,7 @@ class GistsTableViewController: UITableViewController {
 
     // MARK: - Methods
 
+    // UI
     func editUserInterface() {
         title = "Gists"
         navigationController?.navigationBar.prefersLargeTitles = true
