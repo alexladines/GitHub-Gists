@@ -31,6 +31,7 @@ class GistsTableViewController: UITableViewController {
             refreshControl?.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
         }
 
+        // For refresh control
         dateFormatter.dateStyle = .short
         dateFormatter.timeStyle = .long
 
