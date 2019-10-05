@@ -19,7 +19,7 @@ struct Gist: Codable {
         // Use CodingKeys to match JSON
         enum CodingKeys: String, CodingKey {
             case login
-            case avatarURL = "avatar_url"
+            case avatarURL = "avatar_url" // TODO: - Add more
         }
     }
 
