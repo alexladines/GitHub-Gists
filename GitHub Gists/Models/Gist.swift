@@ -33,7 +33,7 @@ struct Gist: Codable {
         case url
         case id
         case gistDescription = "description"
-        case owner
+        case owner // TODO: - Add more
     }
 
 }
