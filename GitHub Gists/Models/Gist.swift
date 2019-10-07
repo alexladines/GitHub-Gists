@@ -14,7 +14,7 @@ struct Gist: Codable {
     // Owner structs are only part of Gist structs
     struct Owner: Codable {
         var login: String // If there is an owner, then there is a login
-        var avatarURL: URL?
+        var avatarURL: URL? // TODO: - Add more
 
         // Use CodingKeys to match JSON
         enum CodingKeys: String, CodingKey {
