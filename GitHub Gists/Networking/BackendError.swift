@@ -22,4 +22,5 @@ enum BackendError: Error {
 // If endpoint fails, the API provides an error message in JSON form, we have to check for that in JSONDecoder
 struct APIProvidedError: Codable {
     let message: String
+    // TODO: - Check documentation if there anymore 
 }
