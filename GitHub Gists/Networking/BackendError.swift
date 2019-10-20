@@ -13,7 +13,7 @@ enum BackendError: Error {
     case network(error: Error)
     case unexpectedResponse(reason: String)
     case parsing(error: Error)
-    case apiProvidedError(reason: String)
+    case apiProvidedError(reason: String) // Add Documentation
     case authCouldNot(reason: String) // Add Documentation
     case authLost(reason: String) // Add Documentation
     case missingRequiredInput(reason: String) // Add Documentation
