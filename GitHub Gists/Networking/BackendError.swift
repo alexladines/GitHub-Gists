@@ -10,13 +10,13 @@ import Foundation
 
 // MARK: - Possible Errors
 enum BackendError: Error {
-    case network(error: Error) // Add Documentation
-    case unexpectedResponse(reason: String) // Add Documentation
-    case parsing(error: Error) // Add Documentation
-    case apiProvidedError(reason: String) // Add Documentation
-    case authCouldNot(reason: String) // Add Documentation
-    case authLost(reason: String) // Add Documentation
-    case missingRequiredInput(reason: String) // Add Documentation
+    case network(error: Error) 
+    case unexpectedResponse(reason: String)
+    case parsing(error: Error)
+    case apiProvidedError(reason: String)
+    case authCouldNot(reason: String)
+    case authLost(reason: String)
+    case missingRequiredInput(reason: String)
 }
 
 // If endpoint fails, the API provides an error message in JSON form, we have to check for that in JSONDecoder
