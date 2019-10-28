@@ -12,7 +12,7 @@ import Foundation
 enum BackendError: Error {
     case network(error: Error) 
     case unexpectedResponse(reason: String)
-    case parsing(error: Error)
+    case parsing(error: Error) //Add Documentation
     case apiProvidedError(reason: String)
     case authCouldNot(reason: String) //Add Documentation
     case authLost(reason: String) //Add Documentation
