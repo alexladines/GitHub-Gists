@@ -16,7 +16,7 @@ enum BackendError: Error {
     case apiProvidedError(reason: String)
     case authCouldNot(reason: String) //Add Documentation
     case authLost(reason: String) //Add Documentation
-    case missingRequiredInput(reason: String) //Add Documentation
+    case missingRequiredInput(reason: String)
 }
 
 // If endpoint fails, the API provides an error message in JSON form, we have to check for that in JSONDecoder
