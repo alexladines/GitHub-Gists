@@ -16,7 +16,7 @@ enum BackendError: Error {
     case parsing(error: Error)
     case apiProvidedError(reason: String)
     case authCouldNot(reason: String) 
-    case authLost(reason: String) 
+    case authLost(reason: String) // TODO: - Check documentation if there anymore 
     case missingRequiredInput(reason: String) // TODO: - Check documentation if there anymore 
 }
 
