@@ -13,7 +13,7 @@ enum BackendError: Error {
     // TODO: - Check documentation if there anymore 
     case network(error: Error) 
     case unexpectedResponse(reason: String)
-    case parsing(error: Error)
+    case parsing(error: Error) // TODO: - Check documentation if there anymore 
     case apiProvidedError(reason: String) // TODO: - Check documentation if there anymore 
     case authCouldNot(reason: String) // TODO: - Check documentation if there anymore 
     case authLost(reason: String) // TODO: - Check documentation if there anymore 
